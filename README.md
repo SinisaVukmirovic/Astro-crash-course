@@ -6,3 +6,6 @@ ___
 #### We can put styles inside of <style></style> tags in Astro, and style in Astro are scoped, any style within a component is portrayed only inside of that component(page).
 
 ### Astro uses top-level Async, so we can just use await without async when fethcing some external API data
+
+### passing props between components with using Astro.props
+### Interface props... not sure I really get it...

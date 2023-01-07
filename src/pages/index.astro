@@ -1,45 +1,11 @@
 ---
-const name = 'Astro';
-
-const purpleStyle = 'purple-style';
-
-const users = ['HTML', 'CSS', 'JS', 'Astro', 'SvelteKit'];
-
-const isVisible = true;
-
-// fetching external data, no need for async since Astro used top-level async
-const responceAPI = await fetch('https://jsonplaceholder.typicode.com/users?_limit=10');
-const usersFromAPI = await responceAPI.json();
+import Layout from '../layouts/Layout.astro';
 ---
 
-<!-- JS expressions inside of {} -->
-<h1>Hello World! {2 + 2}</h1>
-<!-- using JS variables defined in the front matter at the top -->
-<h2>Hello {name} World</h2>
-<!-- dynamic attributes -->
-<h3 class={purpleStyle}>Dynamic Attributes</h3>
-<!-- dysplaying list of multiple items -->
-<ul>
-	{users.map(user => <li>{user}</li>)}
-</ul>
-<!-- conditionals -->
-{isVisible && <p>I am visible!</p>}
-<!-- with using ternary operator -->
-{isVisible ? <p>I am visible by using ternary operator</p> : <p>I am NOT visible by using ternary operator</p>}
-
-<!-- fetching external data -->
-<ul>
-	{usersFromAPI.map(user => <li>{user.name}</li>)}
-</ul>
+<Layout title="Index page">
+	<h1>Hello Astro!</h1>
+</Layout>
 
 <style>
-	/* component scoped styles */
-	h1 {
-		color: red;
-	}
 
-	/* dynamic attributes */
-	.purple-style {
-		color: purple;
-	}
 </style>
