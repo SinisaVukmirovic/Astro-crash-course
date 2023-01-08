@@ -11,7 +11,8 @@ const featuresData = [
         body: ' Need interactive UI? Load individual, non-blocking component islands in parallel.'
     },
     {
-        title: 'Lazy-Loading Islands', body: 'Components only hydrate when they scroll into view. If you don\'t see it, Astro won\'t load it.'
+        title: 'Lazy-Loading Islands', 
+        body: 'Components only hydrate when they scroll into view. If you don\'t see it, Astro won\'t load it.'
     }
 ];
 ---
@@ -25,7 +26,11 @@ const featuresData = [
             </div>
         ))} -->
         {featuresData.map(feature => (
-            <Card dark={true} title={feature.title} body={feature.body} />
+            // <Card dark={true} title={feature.title} body={feature.body} />
+            <Card>
+                <h3>{feature.title}</h3>
+                <p>{feature.body}</p>
+            </Card>
         ))}
     <!-- <div class="container">
         <div class="card">
